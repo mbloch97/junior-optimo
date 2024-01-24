@@ -1,0 +1,93 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: rgba(112, 170, 5, 0.76);
+  padding: 20px;
+  border-bottom: solid 5px black;
+}
+
+body {
+  background-color: rgba(11, 97, 3, 0.815);
+  height: 100vh;
+  border: solid 5px black;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 291px);
+  grid-template-rows: 120px;
+  justify-content: center;
+}
+
+.point-one,
+.point-two,
+.point-three {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* point one */
+.point-one {
+  transform: rotate(315deg);
+  margin-top: 65px;
+  margin-right: 80px;
+}
+
+.space {
+  padding: 25px;
+}
+
+.square {
+  background-color: red;
+  border: solid 3px black;
+  padding: 50px;
+  margin: 10px;
+}
+
+/* point two */
+.point-two {
+  padding-top: 100px;
+}
+
+.space-blue {
+  width: 95px;
+  height: 13px;
+  background-color: blue;
+  border: solid 2px black;
+  margin-top: 20px;
+}
+
+.space-green {
+  padding: 5px;
+}
+
+.circle {
+  width: 100px;
+  height: 90px;
+  background-color: cadetblue;
+  border: solid 5px black;
+  border-radius: 50%;
+  margin-top: 30px;
+  margin-right: 20px;
+}
+
+/* point three */
+.point-three {
+  display: flex;
+  justify-content: space-around;
+}
+
+.text {
+  width: 200px;
+  height: 400px;
+  border: solid 5px black;
+  color: black;
+  background-color: white;
+  font-size: 50px;
+  text-align: center;
+  margin: 40px 20px;
+}
