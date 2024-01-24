@@ -91,3 +91,43 @@ body {
   text-align: center;
   margin: 40px 20px;
 }
+
+/* media query */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 291px);
+  }
+
+  .point-one {
+    order: 1;
+  }
+  .point-two {
+    order: 3;
+  }
+  .point-three {
+    order: 2;
+  }
+  .text {
+    background-color: brown;
+  }
+}
+
+@media (max-width: 582px) {
+  .grid {
+    grid-template-columns: 291px;
+  }
+
+  .point-one {
+    order: 1;
+  }
+  .point-two {
+    order: 2;
+  }
+  .point-three {
+    order: 3;
+  }
+  .text {
+    background-color: blue;
+    margin: 10px 20px;
+  }
+}
