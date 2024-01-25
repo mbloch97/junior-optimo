@@ -18,9 +18,9 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 291px);
+  grid-template-columns: auto 1fr auto;
   grid-template-rows: 120px;
-  justify-content: center;
+  column-gap: 20px;
 }
 
 .point-one,
@@ -32,37 +32,50 @@ body {
 
 /* point one */
 .point-one {
-  transform: rotate(315deg);
-  margin-top: 65px;
-  margin-right: 80px;
-}
-
-.space {
-  padding: 25px;
+  display: flex;
+  column-gap: 25px;
+  transform: rotate(-45deg);
+  margin-top: 50px;
+  margin-left: 25px;
+  height: 150px;
 }
 
 .square {
   background-color: red;
   border: solid 3px black;
-  padding: 50px;
-  margin: 10px;
+  height: 100px;
+  width: 100px;
+}
+
+.square:last-child {
+  margin-top: 18px;
 }
 
 /* point two */
 .point-two {
-  padding-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 25px;
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+.space {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .space-blue {
   width: 95px;
   height: 13px;
   background-color: blue;
-  border: solid 2px black;
-  margin-top: 20px;
+  border: solid 3px black;
+  margin-top: 10px;
 }
 
 .space-green {
-  padding: 5px;
+  height: 30px;
 }
 
 .circle {
@@ -71,25 +84,25 @@ body {
   background-color: cadetblue;
   border: solid 5px black;
   border-radius: 50%;
-  margin-top: 30px;
   margin-right: 20px;
 }
 
 /* point three */
 .point-three {
-  display: flex;
-  justify-content: space-around;
+  margin-top: 27px;
+  margin-right: 20px;
 }
 
 .text {
-  width: 200px;
-  height: 400px;
-  border: solid 5px black;
-  color: black;
+  width: 150px;
+  height: 350px;
   background-color: white;
-  font-size: 50px;
+  border: solid 5px black;
+  font-size: 40px;
+  color: black;
   text-align: center;
-  margin: 40px 20px;
+  padding-top: 20px;
+  margin-left: 90px;
 }
 
 /* animacje */
@@ -112,7 +125,7 @@ body {
 /* media query */
 @media (max-width: 900px) {
   .grid {
-    grid-template-columns: repeat(2, 291px);
+    grid-template-columns: auto 1fr;
   }
 
   .point-one {
@@ -120,9 +133,12 @@ body {
   }
   .point-two {
     order: 3;
+    padding-top: 50px;
+    margin-left: 0px;
   }
   .point-three {
     order: 2;
+    justify-content: flex-end;
   }
   .text {
     background-color: brown;
@@ -131,7 +147,13 @@ body {
 
 @media (max-width: 582px) {
   .grid {
-    grid-template-columns: 291px;
+    grid-template-columns: auto;
+  }
+
+  .point-one,
+  .point-two,
+  .point-three {
+    justify-self: start;
   }
 
   .point-one {
@@ -142,7 +164,9 @@ body {
   }
   .point-three {
     order: 3;
+    margin-left: 40px;
   }
+
   .text {
     background-color: blue;
     margin: 10px 20px;
